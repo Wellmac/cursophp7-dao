@@ -17,16 +17,23 @@ require_once("config.php");
 //echo json_encode($search);
 
 //Carrega um usuário usando o login e a senha ref a aula64-PDO-DAO-LIST concluida ok udemy php7 completo
+//$usuario = new Usuario();
+//$usuario->login("Josefa","maedalange");
+
+//echo $usuario;
+
+/*Criando um novo usuario
+$aluno = new Usuario("aluno", "@lun0");
+$aluno->insert();
+echo $aluno;
+*/
+
 $usuario = new Usuario();
-$usuario->login("Josefa","maedalange");
+
+$usuario->loadbyId(43);
+
+$usuario->update("Teach", "master@#");
 
 echo $usuario;
 
-/*
-$sql = new Sql();
-
-$usuarios = $sql->select("SELECT * FROM tb_usuarios WHERE idusuario >= 7");
-
-echo json_encode($usuarios);
-*/
 ?>
