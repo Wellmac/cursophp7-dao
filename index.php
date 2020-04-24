@@ -32,7 +32,7 @@ $usuario = new Usuario();
 
 $usuario->loadbyId(43);
 
-$usuario->update("Teach", "master@#");
+$usuario->update("Teaches", "master@#");
 
 echo $usuario;
 
